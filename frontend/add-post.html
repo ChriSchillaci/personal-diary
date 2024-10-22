@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Post</title>
+  </head>
+  <body>
+    <main class="main-layout">
+      <div class="add-post">
+        <h2 class="add-post__title">Add post</h2>
+        <form class="add-post__form">
+          <div class="add-post__form__input-container">
+            <label class="add-post__form__input-container__label" for="title"
+              >Title</label
+            >
+            <input
+              id="title"
+              class="add-post__form__input-container__input"
+              type="text"
+              name="title"
+              placeholder="Add title"
+            />
+          </div>
+          <div class="add-post__form__input-container">
+            <label
+              class="add-post__form__input-container__label"
+              for="text_post"
+              >Text</label
+            >
+            <textarea
+              id="text_post"
+              class="add-post__form__input-container__textarea"
+              name="text_post"
+              placeholder="Write something"
+            ></textarea>
+          </div>
+          <button class="add-post__form__submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+    <script type="module" src="./src/ts/add-post.ts"></script>
+  </body>
+</html>

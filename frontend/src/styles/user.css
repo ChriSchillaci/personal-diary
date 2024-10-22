@@ -1,0 +1,74 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin-inline: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.user__img-user {
+  margin-inline: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #7d7d7d;
+}
+
+.user__first-name-container,
+.user__last-name-container,
+.user__email-container,
+.user__images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user__first-name-container__value,
+.user__last-name-container__value,
+.user__email-container__value {
+  padding-block: 5px;
+  max-width: 50%;
+}
+
+.user__first-name-container__value.active,
+.user__last-name-container__value.active,
+.user__email-container__value.active {
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  padding-left: 5px;
+}
+
+.user__images-container__images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user__images-container__images__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #7d7d7d;
+}
+
+.user__btns-container {
+  display: flex;
+  gap: 10px;
+}
+
+.user__btns-container__save-btn {
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: white;
+  background-color: black;
+}
+
+.user__btns-container__delete-btn {
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: white;
+  background-color: rgb(242, 24, 24);
+}

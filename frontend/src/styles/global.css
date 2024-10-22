@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navbar__icon-title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__icon-title-container__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar__links--auth-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar__links--auth-container__links-container {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar__links--auth-container__auth-container {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar__links--auth-container__auth-container__register-btn,
+.navbar__links--auth-container__auth-container__login-btn,
+.navbar__links--auth-container__auth-container__logout-btn {
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.main-layout {
+  max-width: 1440px;
+  margin-block: 40px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
