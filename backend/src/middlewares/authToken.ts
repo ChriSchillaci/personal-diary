@@ -10,18 +10,22 @@ export const authenticateToken = (
   const token = req.cookies.token;
 
   if (!token) {
-    res.sendStatus(401).json({ message: "Invalid Token" });
+    res.status(401).json({ message: "Invalid Token" });
     return;
   }
+
   try {
     const decoded = jwt.verify(
       token,
       String(process.env.SECRET_KEY)
     ) as JwtPayload;
+
     (req as CustomRequest).token = decoded.user;
+
     next();
   } catch (error) {
     console.error("Token verification failed:", error);
-    res.sendStatus(403);
+    res.status(403).json({ message: "Token verification failed" });
+    return;
   }
 };

@@ -25,17 +25,28 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
+app.use("/user", userAuth);
+
 app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "login.html"));
+});
+
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "register.html"));
+});
+app.get("/user", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "user.html"));
+});
+
+app.get("/add-post", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "add-post.html"));
+});
 
 app.get("*", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
-
-app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "test" });
-});
-
-app.use("/user", userAuth);
 
 app.listen(port, () => {
   console.log(`server running in port ${port}`);
