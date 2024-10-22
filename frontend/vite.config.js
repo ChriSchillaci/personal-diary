@@ -1,5 +1,7 @@
-export default {
+import { defineConfig } from "vite";
+
+export default defineConfig({
   build: {
-    outDir: "../backend/public", // output built files to the server public folder
+    outDir: "../backend/public",
   },
-};
+});
