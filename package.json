@@ -2,7 +2,7 @@
   "name": "fullstack-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm install --prefix frontend && npm install --prefix backend && npm install typescript --prefix backend && npx --prefix frontend vite build && npm run build --prefix backend",
+    "build": "npm install --prefix frontend && npm install --prefix backend && npm run build --prefix frontend && npm run build --prefix backend",
     "start": "npm run start --prefix backend"
   },
   "dependencies": {},
