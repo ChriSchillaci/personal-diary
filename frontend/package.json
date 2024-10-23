@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "fullstack-app": "file:..",
     "vite": "^5.4.9"
   },
   "devDependencies": {
