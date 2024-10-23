@@ -43,7 +43,7 @@ route.post("/register", async (req: Request, res: Response) => {
   }
 });
 
-route.post("/login", async (req, res) => {
+route.post("/login", async (req: Request, res: Response) => {
   const { email, password }: Pick<UserSchemaType, "email" | "password"> =
     req.body;
 

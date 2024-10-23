@@ -29,21 +29,20 @@ app.use("/user", userAuth);
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/login", (req, res) => {
+app.get("/login", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "public", "login.html"));
 });
 
-app.get("/register", (req, res) => {
+app.get("/register", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "public", "register.html"));
 });
-app.get("/user", (req, res) => {
+app.get("/user", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "public", "user.html"));
 });
 
-app.get("/add-post", (req, res) => {
+app.get("/add-post", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "public", "add-post.html"));
 });
-
 app.get("*", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
